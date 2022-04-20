@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Stage1.Domain.Guest>
+@{
+
+
+    <h2>Guests</h2>
+
+    <p>
+        @Html.ActionLink("Add New", nameof(Stage1.UI.Controllers.GuestsController.AddGuest))
+    </p>
+
+
+    <table class="table">
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Email
+            </th>
+            <th></th>
+        </tr>
+        
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>                    
+                    @Html.ActionLink("Details", nameof(Stage1.UI.Controllers.GuestsController.Details), new { Id = item.Id })                   
+                </td>
+            </tr>            
+        }
+
+    </table>
+
+}

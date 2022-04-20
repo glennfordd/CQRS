@@ -1,0 +1,52 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="UI\wwwroot\css\site.css" />
+    <Content Include="UI\wwwroot\favicon.ico" />
+    <Content Include="UI\wwwroot\js\site.js" />
+    <Content Include="UI\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css" />
+    <Content Include="UI\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
+    <Content Include="UI\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css" />
+    <Content Include="UI\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+    <Content Include="UI\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css" />
+    <Content Include="UI\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map" />
+    <Content Include="UI\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css" />
+    <Content Include="UI\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+    <Content Include="UI\wwwroot\lib\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="UI\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="UI\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="UI\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <Content Include="UI\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js" />
+    <Content Include="UI\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map" />
+    <Content Include="UI\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js" />
+    <Content Include="UI\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+    <Content Include="UI\wwwroot\lib\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="UI\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map" />
+    <Content Include="UI\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="UI\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map" />
+    <Content Include="UI\wwwroot\lib\bootstrap\LICENSE" />
+    <Content Include="UI\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <Content Include="UI\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <Content Include="UI\wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt" />
+    <Content Include="UI\wwwroot\lib\jquery-validation\dist\additional-methods.js" />
+    <Content Include="UI\wwwroot\lib\jquery-validation\dist\additional-methods.min.js" />
+    <Content Include="UI\wwwroot\lib\jquery-validation\dist\jquery.validate.js" />
+    <Content Include="UI\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js" />
+    <Content Include="UI\wwwroot\lib\jquery-validation\LICENSE.md" />
+    <Content Include="UI\wwwroot\lib\jquery\dist\jquery.js" />
+    <Content Include="UI\wwwroot\lib\jquery\dist\jquery.min.js" />
+    <Content Include="UI\wwwroot\lib\jquery\dist\jquery.min.map" />
+    <Content Include="UI\wwwroot\lib\jquery\LICENSE.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.16" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.16" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+  </ItemGroup>
+
+</Project>

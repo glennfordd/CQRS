@@ -1,0 +1,53 @@
+﻿@model Stage1.UI.Models.GuestDetailsViewModel
+
+@{
+    <h2>Details</h2>
+    <p>
+        @Html.ActionLink("Add Booking", nameof(Stage1.UI.Controllers.GuestsController.AddBooking), new { GuestId = Model.Id })
+    </p>
+    
+    <br />
+
+    <div class="row">
+        <div class="col-md-6"><strong>Name</strong></div>
+        <div class="col-md-6">@Html.DisplayFor(p => p.Name)</div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6"><strong>Email</strong></div>
+        <div class="col-md-6"> @Html.DisplayFor(p => p.Email)</div>
+    </div>
+
+    <br />
+    <br />
+    <br />
+
+    <table class="table">
+        <tr>
+            <th>
+                Restaurant
+            </th>
+            <th>
+                Booking Date/Time
+            </th>
+            <th>
+            </th>
+        </tr>
+
+        @foreach (var item in Model.Bookings)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Restaurant)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BookingDateTime)
+                </td>
+                <td>
+                    @Html.ActionLink("Share", nameof(Stage1.UI.Controllers.GuestsController.Share), new { BookingId = item.Id, HostId = Model.Id })          
+                </td>
+            </tr>
+        }
+
+    </table>
+}
