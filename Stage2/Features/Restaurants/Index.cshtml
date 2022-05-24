@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Stage2.Features.Restaurants.Index.Model>
+@{
+
+
+    <h2>Restaurants</h2>
+
+
+    <p>
+        @Html.ActionLink("Add New", nameof(Stage2.Features.Restaurants.RestaurantsController.AddRestaurant))
+    </p>
+
+    <table class="table">
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Name
+            </th>           
+            <th></th>
+        </tr>
+        
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>                
+                <td>
+                   @* @Html.ActionLink("Edit", nameof(StudentController.Edit), new Edit.Query { Id = item.ID }) |
+                    @Html.ActionLink("Details", nameof(StudentController.Details), new Details.Query { Id = item.ID }) |
+                    @Html.ActionLink("Delete", nameof(StudentController.Delete), new Delete.Query { Id = item.ID }) *@
+                </td>
+            </tr>            
+        }
+
+    </table>
+
+}

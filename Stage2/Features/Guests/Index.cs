@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Stage2.Features.Guests
 {
-    public class GetAll
+    public class Index
     {
         public class Query : IRequest<IEnumerable<Model>>
         {

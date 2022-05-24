@@ -7,5 +7,11 @@ namespace Stage2.Data
     {
         public DbSet<Guest> Guests { get; set; }
         public DbSet<Booking> Bookings { get; set; }
+        public DbSet<Restaurant> Restaurants { get; set; }
+
+        public ReservationContext(DbContextOptions options) : base(options)
+        {
+            Database.EnsureCreated();
+        }
     }
 }

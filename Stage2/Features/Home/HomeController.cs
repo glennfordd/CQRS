@@ -1,13 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Stage2.Models;
+using Stage2.Features.Shared;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Stage2.Controllers
+namespace Stage2.Features.Home
 {
     public class HomeController : Controller
     {
@@ -31,7 +31,7 @@ namespace Stage2.Controllers
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View(new Error { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Stage2.Features.Guests
 {
-    public class Get
+    public class Details
     {
         public class Query : IRequest<Model>
         {
@@ -35,8 +35,10 @@ namespace Stage2.Features.Guests
                         Email = p.Email,
                         Bookings = p.Bookings.Select(b => new Model.Booking()
                         {
+                            Id = b.Id,
                             BookingDateTime = b.BookingDateTime,
-                        })
+                            Restaurant = b.Restaurant.Name,
+                        }),
                     })
                     .FirstOrDefaultAsync();
 
@@ -59,6 +61,8 @@ namespace Stage2.Features.Guests
 
             public class Booking
             {
+                public int Id { get; set; }
+                public string Restaurant { get; set; }
                 public DateTime BookingDateTime { get; set; }
             }
         }

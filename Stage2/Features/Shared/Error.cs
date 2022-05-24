@@ -1,8 +1,8 @@
 using System;
 
-namespace Stage2.Models
+namespace Stage2.Features.Shared
 {
-    public class ErrorViewModel
+    public class Error
     {
         public string RequestId { get; set; }
 

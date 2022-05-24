@@ -1,12 +1,15 @@
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.AspNetCore.Mvc.Razor;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Stage2.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,6 +43,9 @@ namespace Stage2
                 options.ViewLocationFormats.Add("/Features/Shared/{0}.cshtml");
                 options.ViewLocationExpanders.Add(new FeatureFoldersRazorViewEngine());
             });
+
+            services.AddDbContext<ReservationContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:Sql"]));
+            services.AddMediatR(typeof(Startup));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
